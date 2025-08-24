@@ -1,0 +1,437 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red255\green255\blue255;\red26\green26\blue26;
+\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c13348\c13348\c13331;\cssrgb\c100000\c100000\c99985;\cssrgb\c13333\c13333\c13333;
+\cssrgb\c100000\c100000\c100000;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs48 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\ul \ulc2 Main File Directory
+\fs26 \cf4 \cb5 \ulnone \
+\
+your_project_root/\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  .vscode/                       # VS Code workspace settings\cb1 \
+\cb5 \uc0\u9474    \u9492 \u9472 \u9472  settings.json              # Formatting, include paths, extensions, etc.\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  CMakeLists.txt                 # Top-level CMake\cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  README.md\cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  LICENSE\cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  .gitignore\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  scripts/                       # Utility scripts for automation\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  build_all.sh\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  flash_firmware.sh\cb1 \
+\cb5 \uc0\u9474    \u9492 \u9472 \u9472  test_pipeline.py\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  docker/                        # All Dockerfiles and docker-compose\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  gui.Dockerfile\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  ai_backend.Dockerfile\cb1 \
+\cb5 \uc0\u9474    \u9492 \u9472 \u9472  docker-compose.yaml\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  infrastructure/               # Terraform, Helm, K8s YAMLs\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  terraform/\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  helm/\cb1 \
+\cb5 \uc0\u9474    \u9492 \u9472 \u9472  k8s/\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  tools/                         # Internal CLI tools or code generators\cb1 \
+\cb5 \uc0\u9474    \u9492 \u9472 \u9472  log_parser/\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  third_party/                   # External libraries or cloned modules\cb1 \
+\cb5 \uc0\u9474    \u9492 \u9472 \u9472  flatbuffers/\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  build/                         # Out-of-source build (CMake)\cb1 \
+\cb5 \uc0\u9474    \u9492 \u9472 \u9472  (generated files)\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  docs/                          # Diagrams, Confluence exports, etc.\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  architecture/\cb1 \
+\cb5 \uc0\u9474    \u9492 \u9472 \u9472  user_manual/\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  embedded/                      # Emulated Embedded System (QEMU + FreeRTOS)\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  CMakeLists.txt\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  include/\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  src/\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  drivers/\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  tests/                     # Ceedling project\cb1 \
+\cb5 \uc0\u9474    \u9492 \u9472 \u9472  qemu_config/\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  gui/                           # Flight Dashboard GUI (Qt)\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  CMakeLists.txt\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  include/\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  src/\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  assets/\cb1 \
+\cb5 \uc0\u9474    \u9492 \u9472 \u9472  tests/                     # GoogleTest + CTest\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  ai_backend/                    # Python FastAPI + AI models\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  app/\cb1 \
+\cb5 \uc0\u9474    \u9474    \u9500 \u9472 \u9472  main.py\cb1 \
+\cb5 \uc0\u9474    \u9474    \u9500 \u9472 \u9472  routes/\cb1 \
+\cb5 \uc0\u9474    \u9474    \u9500 \u9472 \u9472  services/\cb1 \
+\cb5 \uc0\u9474    \u9474    \u9500 \u9472 \u9472  models/\cb1 \
+\cb5 \uc0\u9474    \u9474    \u9492 \u9472 \u9472  utils/\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  tests/                     # Pytest test suite\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  data/                      # Sample telemetry, training sets\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  notebooks/                 # Jupyter experimentation\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  requirements.txt\cb1 \
+\cb5 \uc0\u9474    \u9492 \u9472 \u9472  Dockerfile\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9500 \u9472 \u9472  database/                      # DB migrations, schemas, init scripts\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  postgres/\cb1 \
+\cb5 \uc0\u9474    \u9474    \u9492 \u9472 \u9472  init.sql\cb1 \
+\cb5 \uc0\u9474    \u9500 \u9472 \u9472  sqlite/\cb1 \
+\cb5 \uc0\u9474    \u9492 \u9472 \u9472  migrations/\cb1 \
+\cb5 \uc0\u9474 \cb1 \
+\cb5 \uc0\u9492 \u9472 \u9472  ci/                            # Jenkins or Bamboo pipelines\cb1 \
+\cb5     \uc0\u9500 \u9472 \u9472  Jenkinsfile\cb1 \
+\cb5     \uc0\u9492 \u9472 \u9472  pipeline.yml\cb1 \
+\
+\
+\
+
+\fs48 \cf2 \ul \ulc2 Embedded Directory
+\fs26 \cf4 \ulnone \
+\
+embedded/\
+\uc0\u9500 \u9472 \u9472  CMakeLists.txt\
+\uc0\u9500 \u9472 \u9472  config/                       # Platform configs (FreeRTOS, QEMU, memory maps)\
+\uc0\u9474    \u9500 \u9472 \u9472  FreeRTOSConfig.h\
+\uc0\u9474    \u9500 \u9472 \u9472  memory.ld\
+\uc0\u9474    \u9492 \u9472 \u9472  qemu_startup.s\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  include/                      # Public headers (visible to other targets)\
+\uc0\u9474    \u9500 \u9472 \u9472  main.hpp\
+\uc0\u9474    \u9500 \u9472 \u9472  system.hpp\
+\uc0\u9474    \u9492 \u9472 \u9472  telemetry/\
+\uc0\u9474        \u9492 \u9472 \u9472  telemetry_packet.hpp\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  src/                          # Core embedded source code\
+\uc0\u9474    \u9500 \u9472 \u9472  main.cpp\
+\uc0\u9474    \u9500 \u9472 \u9472  system.cpp\
+\uc0\u9474    \u9492 \u9472 \u9472  telemetry/\
+\uc0\u9474        \u9492 \u9472 \u9472  telemetry_packet.cpp\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  drivers/                      # HAL or BSP-like hardware interfaces\
+\uc0\u9474    \u9500 \u9472 \u9472  serial/\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  serial_driver.cpp\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  serial_driver.hpp\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  mock_serial_driver.cpp   # Used by tests\
+\uc0\u9474    \u9492 \u9472 \u9472  sensors/\
+\uc0\u9474        \u9500 \u9472 \u9472  imu.cpp\
+\uc0\u9474        \u9500 \u9472 \u9472  imu.hpp\
+\uc0\u9474        \u9492 \u9472 \u9472  mock_imu.cpp\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  rtos/                         # FreeRTOS tasks, wrappers, or services\
+\uc0\u9474    \u9500 \u9472 \u9472  tasks/\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  telemetry_task.cpp\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  telemetry_task.hpp\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  scheduler.cpp\
+\uc0\u9474    \u9492 \u9472 \u9472  os_abstraction/\
+\uc0\u9474        \u9500 \u9472 \u9472  mutex_wrapper.hpp\
+\uc0\u9474        \u9492 \u9472 \u9472  queue_wrapper.hpp\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  protocols/                    # Protocol handling (e.g., DIS, FlatBuffers)\
+\uc0\u9474    \u9500 \u9472 \u9472  dis_encoder.cpp\
+\uc0\u9474    \u9500 \u9472 \u9472  dis_encoder.hpp\
+\uc0\u9474    \u9492 \u9472 \u9472  flatbuffer_serializer.cpp\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  utils/                        # Platform-agnostic utilities\
+\uc0\u9474    \u9500 \u9472 \u9472  ring_buffer.hpp\
+\uc0\u9474    \u9492 \u9472 \u9472  crc.cpp\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  tests/                        # Ceedling-compatible C tests\
+\uc0\u9474    \u9500 \u9472 \u9472  test_serial_driver.c\
+\uc0\u9474    \u9500 \u9472 \u9472  test_telemetry_packet.c\
+\uc0\u9474    \u9500 \u9472 \u9472  test_scheduler.c\
+\uc0\u9474    \u9492 \u9472 \u9472  test_config.yml          # Ceedling project config\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  qemu_config/                  # QEMU setup scripts and documentation\
+\uc0\u9474    \u9500 \u9472 \u9472  qemu_start.sh\
+\uc0\u9474    \u9500 \u9472 \u9472  qemu_flash.bin\
+\uc0\u9474    \u9492 \u9472 \u9472  README.md\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  mocks/                        # C++ mocks used for integration tests\
+\uc0\u9474    \u9492 \u9472 \u9472  mock_platform.hpp\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  build/                        # (gitignored) compiled binaries and output\
+\
+\
+\
+
+\fs48 \cf2 \ul \ulc2 GUI Directory
+\fs26 \cf4 \ulnone \
+\
+gui/\
+\uc0\u9500 \u9472 \u9472  CMakeLists.txt\
+\uc0\u9500 \u9472 \u9472  main.cpp\
+\uc0\u9500 \u9472 \u9472  include/                           # Public headers (for install/export if needed)\
+\uc0\u9474    \u9500 \u9472 \u9472  app_window.hpp\
+\uc0\u9474    \u9500 \u9472 \u9472  telemetry_plot.hpp\
+\uc0\u9474    \u9500 \u9472 \u9472  serial_interface.hpp\
+\uc0\u9474    \u9500 \u9472 \u9472  dashboard_model.hpp\
+\uc0\u9474    \u9500 \u9472 \u9472  settings_manager.hpp\
+\uc0\u9474    \u9492 \u9472 \u9472  ai_client.hpp\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  src/                               # Application source logic\
+\uc0\u9474    \u9500 \u9472 \u9472  app_window.cpp\
+\uc0\u9474    \u9500 \u9472 \u9472  telemetry_plot.cpp\
+\uc0\u9474    \u9500 \u9472 \u9472  serial_interface.cpp\
+\uc0\u9474    \u9500 \u9472 \u9472  dashboard_model.cpp\
+\uc0\u9474    \u9500 \u9472 \u9472  settings_manager.cpp\
+\uc0\u9474    \u9492 \u9472 \u9472  ai_client.cpp\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  ui/                                # Qt Designer .ui files (optional)\
+\uc0\u9474    \u9492 \u9472 \u9472  dashboard.ui\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  assets/                            # Icons, fonts, style sheets, etc.\
+\uc0\u9474    \u9500 \u9472 \u9472  logo.png\
+\uc0\u9474    \u9500 \u9472 \u9472  styles.qss\
+\uc0\u9474    \u9492 \u9472 \u9472  fonts/\
+\uc0\u9474        \u9492 \u9472 \u9472  digital-7.ttf\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  data/                              # Sample telemetry logs for dev/demo\
+\uc0\u9474    \u9492 \u9472 \u9472  sample_flight_data.json\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  tests/                             # GUI and logic tests using GoogleTest + QtTest\
+\uc0\u9474    \u9500 \u9472 \u9472  test_telemetry_plot.cpp\
+\uc0\u9474    \u9500 \u9472 \u9472  test_dashboard_model.cpp\
+\uc0\u9474    \u9492 \u9472 \u9472  test_serial_interface.cpp\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  mocks/                             # Test doubles or simulated interfaces\
+\uc0\u9474    \u9500 \u9472 \u9472  mock_serial_port.hpp\
+\uc0\u9474    \u9492 \u9472 \u9472  mock_ai_client.hpp\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  qss/                               # Modularized Qt stylesheets\
+    \uc0\u9500 \u9472 \u9472  base.qss\
+    \uc0\u9492 \u9472 \u9472  dark_theme.qss\
+\
+\
+
+\fs48 \cf2 \ul \ulc2 AI Backend Directory\
+
+\fs26 \cf4 \ulnone \
+ai_backend/\
+\uc0\u9500 \u9472 \u9472  app/                              # FastAPI application package\
+\uc0\u9474    \u9500 \u9472 \u9472  __init__.py\
+\uc0\u9474    \u9500 \u9472 \u9472  main.py                       # Entrypoint: FastAPI server and routes\
+\uc0\u9474    \u9500 \u9472 \u9472  routes/                       # API endpoint routers\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  __init__.py\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  telemetry.py\
+\uc0\u9474    \u9474 \
+\uc0\u9474    \u9500 \u9472 \u9472  services/                     # AI logic, inference orchestration\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  __init__.py\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  model_loader.py\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  prediction_engine.py\
+\uc0\u9474    \u9474 \
+\uc0\u9474    \u9500 \u9472 \u9472  models/                       # Pydantic schemas (request/response types)\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  __init__.py\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  telemetry_payload.py\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  ai_response.py\
+\uc0\u9474    \u9474 \
+\uc0\u9474    \u9500 \u9472 \u9472  utils/                        # Helpers: preprocessing, logging, formatting\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  __init__.py\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  preprocessor.py\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  logger.py\
+\uc0\u9474    \u9474 \
+\uc0\u9474    \u9492 \u9472 \u9472  config.py                     # Settings (env vars, model paths, etc.)\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  tests/                            # Pytest test suite\
+\uc0\u9474    \u9500 \u9472 \u9472  conftest.py\
+\uc0\u9474    \u9500 \u9472 \u9472  test_routes.py\
+\uc0\u9474    \u9500 \u9472 \u9472  test_model_loader.py\
+\uc0\u9474    \u9492 \u9472 \u9472  test_prediction_engine.py\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  notebooks/                        # Jupyter notebooks for model exploration\
+\uc0\u9474    \u9492 \u9472 \u9472  telemetry_prediction.ipynb\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  data/                             # Sample and training data\
+\uc0\u9474    \u9500 \u9472 \u9472  raw/\
+\uc0\u9474    \u9500 \u9472 \u9472  processed/\
+\uc0\u9474    \u9492 \u9472 \u9472  demo_input.json\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  models/                           # Trained model files (e.g., .pt, .h5, .onnx)\
+\uc0\u9474    \u9500 \u9472 \u9472  latest_model.pt\
+\uc0\u9474    \u9500 \u9472 \u9472  scaler.pkl\
+\uc0\u9474    \u9492 \u9472 \u9472  metadata.json\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  requirements.txt                  # Dependencies\
+\uc0\u9500 \u9472 \u9472  Dockerfile                        # Container definition\
+\uc0\u9500 \u9472 \u9472  .env                              # Local environment variables (gitignored)\
+\uc0\u9492 \u9472 \u9472  README.md\
+\
+\
+\
+\
+
+\fs48 \cf2 \ul \ulc2 Database Directory
+\fs26 \cf4 \ulnone \
+\
+database/\
+\uc0\u9500 \u9472 \u9472  README.md\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  schemas/                         # SQL schema definitions\
+\uc0\u9474    \u9500 \u9472 \u9472  postgres/\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  schema.sql\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  indexes.sql\
+\uc0\u9474    \u9492 \u9472 \u9472  sqlite/\
+\uc0\u9474        \u9492 \u9472 \u9472  schema.sql\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  init/                            # Initialization scripts for dev/test DBs\
+\uc0\u9474    \u9500 \u9472 \u9472  postgres_init.sql\
+\uc0\u9474    \u9500 \u9472 \u9472  sqlite_init.sql\
+\uc0\u9474    \u9492 \u9472 \u9472  demo_data.sql\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  migrations/                      # Version-controlled DB migrations (Flyway or Alembic)\
+\uc0\u9474    \u9500 \u9472 \u9472  V1__create_telemetry_table.sql\
+\uc0\u9474    \u9500 \u9472 \u9472  V2__add_ai_feedback_table.sql\
+\uc0\u9474    \u9492 \u9472 \u9472  V3__add_index_on_timestamp.sql\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  flatbuffers/                     # .fbs schema definitions for FlatBuffers\
+\uc0\u9474    \u9500 \u9472 \u9472  telemetry.fbs\
+\uc0\u9474    \u9500 \u9472 \u9472  health_status.fbs\
+\uc0\u9474    \u9492 \u9472 \u9472  messages.fbs\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  models/                          # ORM classes (optional, e.g., SQLAlchemy)\
+\uc0\u9474    \u9500 \u9472 \u9472  __init__.py\
+\uc0\u9474    \u9500 \u9472 \u9472  telemetry.py\
+\uc0\u9474    \u9500 \u9472 \u9472  ai_feedback.py\
+\uc0\u9474    \u9492 \u9472 \u9472  db.py\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  seeds/                           # Datasets for training or replay testing\
+\uc0\u9474    \u9500 \u9472 \u9472  flight_001.csv\
+\uc0\u9474    \u9500 \u9472 \u9472  test_fault_injection.json\
+\uc0\u9474    \u9492 \u9472 \u9472  ai_ground_truth_labels.csv\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  connections/                     # DB connector utility scripts\
+\uc0\u9474    \u9500 \u9472 \u9472  postgres.py\
+\uc0\u9474    \u9500 \u9472 \u9472  sqlite.py\
+\uc0\u9474    \u9492 \u9472 \u9472  shared_config.py\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  docker/                          # DB container definitions\
+    \uc0\u9500 \u9472 \u9472  postgres.Dockerfile\
+    \uc0\u9492 \u9472 \u9472  docker-compose.yml\
+\
+\
+
+\fs48 \cf2 \ul \ulc2 Infrastructure Directory
+\fs26 \cf4 \ulnone \
+\
+\
+infrastructure/\
+\uc0\u9500 \u9472 \u9472  terraform/                         # Infrastructure as Code (cloud provisioning)\
+\uc0\u9474    \u9500 \u9472 \u9472  modules/\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  network/\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  compute/\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  storage/\
+\uc0\u9474    \u9500 \u9472 \u9472  environments/\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  dev/\
+\uc0\u9474    \u9474    \u9474    \u9492 \u9472 \u9472  main.tf\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  staging/\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  prod/\
+\uc0\u9474    \u9492 \u9472 \u9472  variables.tf\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  helm/                              # Helm charts for Kubernetes deployment\
+\uc0\u9474    \u9500 \u9472 \u9472  charts/\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  ai-backend/\
+\uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  Chart.yaml\
+\uc0\u9474    \u9474    \u9474    \u9500 \u9472 \u9472  values.yaml\
+\uc0\u9474    \u9474    \u9474    \u9492 \u9472 \u9472  templates/\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  gui-dashboard/\
+\uc0\u9474    \u9474        \u9500 \u9472 \u9472  Chart.yaml\
+\uc0\u9474    \u9474        \u9492 \u9472 \u9472  templates/\
+\uc0\u9474    \u9492 \u9472 \u9472  common-values/\
+\uc0\u9474        \u9500 \u9472 \u9472  dev-values.yaml\
+\uc0\u9474        \u9500 \u9472 \u9472  prod-values.yaml\
+\uc0\u9474        \u9492 \u9472 \u9472  staging-values.yaml\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  k8s/                               # Raw Kubernetes YAMLs (or Kustomize overlays)\
+\uc0\u9474    \u9500 \u9472 \u9472  base/\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  namespace.yaml\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  secrets.yaml\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  configmap.yaml\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  ingress.yaml\
+\uc0\u9474    \u9500 \u9472 \u9472  overlays/\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  dev/\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  staging/\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  prod/\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  secrets/                           # Encrypted or templated secrets\
+\uc0\u9474    \u9500 \u9472 \u9472  dev.env.enc\
+\uc0\u9474    \u9500 \u9472 \u9472  prod.env.enc\
+\uc0\u9474    \u9492 \u9472 \u9472  decrypt_secrets.sh\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  monitoring/                        # Monitoring/alerting setup\
+\uc0\u9474    \u9500 \u9472 \u9472  prometheus/\
+\uc0\u9474    \u9474    \u9500 \u9472 \u9472  prometheus.yml\
+\uc0\u9474    \u9474    \u9492 \u9472 \u9472  alert_rules.yml\
+\uc0\u9474    \u9492 \u9472 \u9472  grafana/\
+\uc0\u9474        \u9500 \u9472 \u9472  dashboards/\
+\uc0\u9474        \u9474    \u9492 \u9472 \u9472  telemetry-overview.json\
+\uc0\u9474        \u9492 \u9472 \u9472  datasources.yaml\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  README.md\
+\
+\
+\
+
+\fs48 \ul Scripts Directory
+\fs26 \ulnone \
+\
+scripts/\
+\uc0\u9500 \u9472 \u9472  README.md\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  build/                           # Build automation scripts\
+\uc0\u9474    \u9500 \u9472 \u9472  build_all.sh\
+\uc0\u9474    \u9500 \u9472 \u9472  build_gui.sh\
+\uc0\u9474    \u9500 \u9472 \u9472  build_embedded.sh\
+\uc0\u9474    \u9492 \u9472 \u9472  build_ai_backend.sh\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  run/                             # Runtime launch scripts (dev/test/demo)\
+\uc0\u9474    \u9500 \u9472 \u9472  run_qemu.sh\
+\uc0\u9474    \u9500 \u9472 \u9472  run_gui.sh\
+\uc0\u9474    \u9500 \u9472 \u9472  run_ai_backend.sh\
+\uc0\u9474    \u9500 \u9472 \u9472  run_fullstack.sh\
+\uc0\u9474    \u9492 \u9472 \u9472  run_docker_stack.sh\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  test/                            # Testing automation\
+\uc0\u9474    \u9500 \u9472 \u9472  test_embedded.sh\
+\uc0\u9474    \u9500 \u9472 \u9472  test_gui.sh\
+\uc0\u9474    \u9500 \u9472 \u9472  test_ai_backend.sh\
+\uc0\u9474    \u9492 \u9472 \u9472  ci_run_all_tests.sh\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  deploy/                          # Deployment scripts (CI/CD integration)\
+\uc0\u9474    \u9500 \u9472 \u9472  deploy_helm_dev.sh\
+\uc0\u9474    \u9500 \u9472 \u9472  deploy_helm_prod.sh\
+\uc0\u9474    \u9500 \u9472 \u9472  apply_kustomize.sh\
+\uc0\u9474    \u9492 \u9472 \u9472  terraform_apply.sh\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  format/                          # Code formatting & linting\
+\uc0\u9474    \u9500 \u9472 \u9472  format_cpp.sh\
+\uc0\u9474    \u9500 \u9472 \u9472  format_python.sh\
+\uc0\u9474    \u9500 \u9472 \u9472  lint_cpp.sh\
+\uc0\u9474    \u9492 \u9472 \u9472  lint_python.sh\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  data/                            # Data-related scripts (loading/exporting)\
+\uc0\u9474    \u9500 \u9472 \u9472  export_telemetry.py\
+\uc0\u9474    \u9500 \u9472 \u9472  seed_db.py\
+\uc0\u9474    \u9492 \u9472 \u9472  convert_flatbuffers.py\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  monitoring/                      # Scripts to interact with Grafana/Prometheus\
+\uc0\u9474    \u9500 \u9472 \u9472  get_metrics.sh\
+\uc0\u9474    \u9492 \u9472 \u9472  restart_alerting.sh\
+\uc0\u9474 \
+\uc0\u9492 \u9472 \u9472  env/                             # Environment setup & checks\
+    \uc0\u9500 \u9472 \u9472  check_dependencies.sh\
+    \uc0\u9500 \u9472 \u9472  activate_venv.sh\
+    \uc0\u9492 \u9472 \u9472  generate_env_files.sh\
+\
+\
+\
+\
+\
+\
+\
+\
+}
