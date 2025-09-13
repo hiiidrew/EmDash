@@ -8,6 +8,7 @@ add_executable(emdash_embedded
     protocols/dis_encoder.cpp
     protocols/flatbuffer_serializer.cpp
     rtos/tasks/telemetry_task.cpp
+    rtos/tasks/ai_task.cpp
     rtos/tasks/scheduler.cpp
 )
 

@@ -4,16 +4,17 @@
 #include "telemetry_task.hpp"
 
 #include <FreeRTOS.h>
-#include <task.h>
 #include <queue.h>
+#include <task.h>
 #include <cstdio>
 
 // Global queue handle definition
 QueueHandle_t telemetryQueue = nullptr;
 
-void telemetry_producer_task(void *pvParameters) {
-    (void)pvParameters;
+TelemetryTask::TelemetryTask()
+    : Task("telemetry", tskIDLE_PRIORITY + 1, configMINIMAL_STACK_SIZE * 2) {}
 
+void TelemetryTask::run() {
     for (int i = 0; i < 5; ++i) {
         TelemetryMessage msg{};
         // Produce a simple JSON string manually to avoid dynamic allocations

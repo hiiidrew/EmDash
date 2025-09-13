@@ -1,29 +1,19 @@
 #pragma once
 
-#include <FreeRTOS.h>
-#include <task.h>
 #include <vector>
 
+class Task;
+
 /**
- * Lightweight wrapper around the FreeRTOS scheduler to simplify
- * task registration from C++ code.
+ * Lightweight wrapper around the FreeRTOS scheduler to manage Task objects.
  */
 class Scheduler {
 public:
-    struct Task {
-        const char *name;
-        TaskFunction_t fn;
-        void *param;
-        UBaseType_t priority;
-        uint16_t stackDepth;
-    };
-
-    void add_task(Task task);
+    void add_task(Task *task);
     void start();
     void stop();
 
 private:
-    std::vector<Task> tasks_;
-    std::vector<TaskHandle_t> handles_;
+    std::vector<Task *> tasks_;
 };
 
