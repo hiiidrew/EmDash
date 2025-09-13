@@ -26,3 +26,10 @@ target_compile_features(emdash_embedded PRIVATE cxx_std_17)
 
 find_package(Threads REQUIRED)
 target_link_libraries(emdash_embedded PRIVATE Threads::Threads)
+
+add_custom_target(run-qemu
+    COMMAND qemu-x86_64 $<TARGET_FILE:emdash_embedded>
+    DEPENDS emdash_embedded
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+    COMMENT "Execute emdash_embedded under QEMU user-mode"
+)
