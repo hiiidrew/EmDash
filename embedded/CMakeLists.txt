@@ -33,3 +33,42 @@ add_custom_target(run-qemu
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
     COMMENT "Execute emdash_embedded under QEMU user-mode"
 )
+
+# ---------------------------
+# Test executables
+# ---------------------------
+
+add_executable(test_scheduler
+    tests/test_scheduler.cpp
+    rtos/tasks/scheduler.cpp
+)
+target_include_directories(test_scheduler PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/config
+    ${CMAKE_CURRENT_SOURCE_DIR}/freertos
+    ${CMAKE_CURRENT_SOURCE_DIR}/rtos
+    ${CMAKE_CURRENT_SOURCE_DIR}/rtos/tasks
+)
+target_link_libraries(test_scheduler PRIVATE Threads::Threads)
+add_test(NAME scheduler COMMAND test_scheduler)
+
+add_executable(test_serial_driver
+    tests/test_serial_driver.cpp
+)
+target_link_libraries(test_serial_driver PRIVATE Threads::Threads)
+add_test(NAME serial_driver COMMAND test_serial_driver)
+
+add_executable(test_telemetry_packet
+    tests/test_telemetry_packet.cpp
+    protocols/dis_encoder.cpp
+)
+target_include_directories(test_telemetry_packet PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/protocols
+    ${CMAKE_CURRENT_SOURCE_DIR}/rtos
+    ${CMAKE_CURRENT_SOURCE_DIR}/rtos/tasks
+    ${CMAKE_CURRENT_SOURCE_DIR}/config
+    ${CMAKE_CURRENT_SOURCE_DIR}/freertos
+)
+target_link_libraries(test_telemetry_packet PRIVATE Threads::Threads)
+add_test(NAME telemetry_packet COMMAND test_telemetry_packet)
