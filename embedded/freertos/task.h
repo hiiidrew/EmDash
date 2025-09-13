@@ -16,7 +16,6 @@ inline BaseType_t xTaskCreate(TaskFunction_t fn,
     (void)name; (void)stackDepth; (void)priority;
     std::thread *t = new std::thread(fn, param);
     if (outHandle) { *outHandle = t; }
-    t->detach();
     return pdTRUE;
 }
 
@@ -28,6 +27,9 @@ inline void vTaskStartScheduler() {}
 
 inline void vTaskDelete(TaskHandle_t handle) {
     if (handle) {
+        if (handle->joinable()) {
+            handle->join();
+        }
         delete handle;
     }
 }

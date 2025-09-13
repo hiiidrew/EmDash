@@ -9,11 +9,13 @@ AITask::AITask()
 
 void AITask::run() {
     TelemetryMessage msg;
-    for (;;) {
+    int count = 0;
+    while (count < 5) {
         if (xQueueReceive(telemetryQueue, &msg, portMAX_DELAY) == pdTRUE) {
             std::cout << "AI received telemetry: " << msg.payload << '\n';
-            vTaskDelay(pdMS_TO_TICKS(150));
+            ++count;
         }
     }
+    vTaskDelete(nullptr);
 }
 

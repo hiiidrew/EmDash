@@ -1,6 +1,7 @@
 #include <FreeRTOS.h>
 #include <queue.h>
 #include <iostream>
+#include <task.h>
 
 #include "rtos/tasks/telemetry_task.hpp"
 #include "rtos/tasks/ai_task.hpp"
@@ -22,12 +23,16 @@ int main() {
     sched.add_task(&telemetry);
     sched.add_task(&ai);
 
-    // This call does not return under normal operation
+    // Start tasks running concurrently
     sched.start();
 
-    // Should never reach here
-    for (;;)
-        ;
+    // Allow tasks to execute
+    vTaskDelay(pdMS_TO_TICKS(1000));
+
+    // Stop scheduler and join task threads
+    sched.stop();
+
+    std::cout << "Simulation complete" << std::endl;
     return 0;
 }
 
