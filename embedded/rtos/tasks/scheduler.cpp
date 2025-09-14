@@ -1,9 +1,37 @@
+codex/generate-main.cpp-for-emulated-embedded-hardware-4o2oez
+#include "scheduler.hpp"
+#include "task.hpp"
+
+#include <FreeRTOS.h>
+#include <task.h>
+  
 #include <vector>
 #include <thread>
 #include <functional>
 #include <chrono>
 #include <atomic>
 #include <string>
+  
+#ifdef SCHEDULER_DEMO
+#include <iostream>
+
+void Scheduler::add_task(Task *task) { tasks_.push_back(task); }
+
+void Scheduler::start() {
+    for (auto *t : tasks_) {
+        t->start();
+    }
+    vTaskStartScheduler();
+}
+
+void Scheduler::stop() {
+    for (auto *t : tasks_) {
+        if (t->handle() != nullptr) {
+            vTaskDelete(t->handle());
+        }
+    }
+    tasks_.clear();
+}
 
 /**
  * Minimal cooperative scheduler used for unit testing and host based
@@ -71,8 +99,7 @@ private:
 // Example usage stub demonstrating how the scheduler might be wired
 // into the broader system.  This is not executed in production builds
 // but serves as a reference.
-#ifdef SCHEDULER_DEMO
-#include <iostream>
+
 int main() {
     Scheduler sched;
     sched.add_task({"heartbeat", [](){ std::cout << "tick\n"; }, std::chrono::milliseconds(100)});
@@ -82,4 +109,5 @@ int main() {
     return 0;
 }
 #endif
+main
 

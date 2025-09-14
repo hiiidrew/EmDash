@@ -1,0 +1,8 @@
+# Build directories
+build/
+embedded/build/
+embedded/qemu_config/build/
+
+# QEMU artifacts
+embedded/qemu_config/qemu_flash.bin
+
