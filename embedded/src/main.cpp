@@ -1,8 +1,24 @@
-codex/generate-main.cpp-for-emulated-embedded-hardware-4o2oez
 #include <FreeRTOS.h>
 #include <queue.h>
 #include <iostream>
 #include <task.h>
+#include <thread>
+#include <chrono>
+#include <queue>
+#include <mutex>
+#include <condition_variable>
+#include <string>
+
+#ifdef __has_include
+#  if __has_include(<nlohmann/json.hpp>)
+#    include <nlohmann/json.hpp>
+#    define HAS_JSON 1
+#  else
+#    define HAS_JSON 0
+#  endif
+#else
+#  define HAS_JSON 0
+#endif
 
 #include "rtos/tasks/telemetry_task.hpp"
 #include "rtos/tasks/ai_task.hpp"
@@ -35,24 +51,6 @@ int main() {
 
     std::cout << "Simulation complete" << std::endl;
 
-#include <iostream>
-#include <thread>
-#include <chrono>
-#include <queue>
-#include <mutex>
-#include <condition_variable>
-#include <string>
-
-#ifdef __has_include
-#  if __has_include(<nlohmann/json.hpp>)
-#    include <nlohmann/json.hpp>
-#    define HAS_JSON 1
-#  else
-#    define HAS_JSON 0
-#  endif
-#else
-#  define HAS_JSON 0
-#endif
 
 /**
  * Simple emulation of an embedded flight system.  The goal of this
